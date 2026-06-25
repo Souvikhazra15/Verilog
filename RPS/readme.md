@@ -1,3 +1,4 @@
+<img width="596" height="341" alt="image" src="https://github.com/user-attachments/assets/1a157b55-3b50-4452-a9c0-f5b7b74b75b1" />
 
 # Rock-Paper-Scissors (Verilog)
 
