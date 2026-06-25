@@ -1,4 +1,4 @@
-![Uploading image.png…]()
+<img width="1114" height="555" alt="image" src="https://github.com/user-attachments/assets/0a746a1a-cc03-430c-b13f-b8e6cc50c957" />
 
 # 4-bit ALU (Verilog)
 
