@@ -1,3 +1,4 @@
+![Uploading image.png…]()
 
 # 4-bit ALU (Verilog)
 
