@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="title desc">
+  <title id="title">Traffic Light Controller State Diagram</title>
+  <desc id="desc">State transition diagram for the traffic light FSM showing s0 to s1, s1 to s0, and s2 as a red fallback state.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#e2e8f0"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #f9fafb; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #cbd5e1; }
+      .node { fill: #182230; stroke: #64748b; stroke-width: 2; }
+      .node-accent { fill: #11253b; stroke: #38bdf8; stroke-width: 2.5; }
+      .node-warn { fill: #2b1515; stroke: #f97316; stroke-width: 2.5; }
+      .state { font: 700 22px Arial, sans-serif; fill: #f8fafc; text-anchor: middle; }
+      .desc { font: 400 14px Arial, sans-serif; fill: #cbd5e1; text-anchor: middle; }
+      .edge { stroke: #e2e8f0; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .edge-dashed { stroke: #94a3b8; stroke-width: 2.5; stroke-dasharray: 8 8; fill: none; marker-end: url(#arrow); }
+      .edge-label { font: 600 14px Arial, sans-serif; fill: #e2e8f0; }
+    </style>
+  </defs>
+
+  <rect width="960" height="480" rx="28" fill="url(#bg)"/>
+  <text x="48" y="60" class="title">State Transition Diagram</text>
+  <text x="48" y="90" class="subtitle">Clocked behavior implemented in the FSM</text>
+
+  <rect x="110" y="190" width="170" height="100" rx="22" class="node-accent"/>
+  <text x="195" y="228" class="state">s0</text>
+  <text x="195" y="254" class="desc">green output</text>
+
+  <rect x="395" y="190" width="170" height="100" rx="22" class="node"/>
+  <text x="480" y="228" class="state">s1</text>
+  <text x="480" y="254" class="desc">yellow output</text>
+
+  <rect x="680" y="190" width="170" height="100" rx="22" class="node-warn"/>
+  <text x="765" y="228" class="state">s2</text>
+  <text x="765" y="254" class="desc">red fallback</text>
+
+  <path d="M280 225 C330 160, 360 160, 395 225" class="edge"/>
+  <text x="340" y="165" class="edge-label">posedge clk</text>
+
+  <path d="M480 290 C480 340, 265 340, 195 290" class="edge"/>
+  <text x="292" y="362" class="edge-label">posedge clk</text>
+
+  <path d="M765 290 C765 350, 765 350, 765 290" class="edge-dashed"/>
+  <text x="793" y="364" class="edge-label">reserved</text>
+
+  <path d="M680 240 C640 240, 620 240, 565 240" class="edge-dashed"/>
+  <text x="600" y="228" class="edge-label">default</text>
+
+  <path d="M395 240 C355 240, 330 240, 280 240" class="edge-dashed"/>
+  <text x="332" y="228" class="edge-label">default</text>
+</svg>

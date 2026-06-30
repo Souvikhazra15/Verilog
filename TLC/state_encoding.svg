@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Traffic Light Controller State Summary</title>
+  <desc id="desc">A visual summary of the FSM states, encodings, and output light values.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #f9fafb; }
+      .subtitle { font: 400 16px Arial, sans-serif; fill: #cbd5e1; }
+      .label { font: 700 18px Arial, sans-serif; fill: #e5e7eb; }
+      .value { font: 400 15px Arial, sans-serif; fill: #cbd5e1; }
+      .mono { font: 600 16px Consolas, monospace; fill: #f8fafc; }
+      .small { font: 400 13px Arial, sans-serif; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <rect width="960" height="420" rx="28" fill="url(#bg)"/>
+  <text x="48" y="62" class="title">Traffic Light Controller FSM</text>
+  <text x="48" y="92" class="subtitle">State encodings and output values used by TrafficLightController.v</text>
+
+  <rect x="48" y="130" width="864" height="214" rx="22" fill="url(#card)" stroke="#334155" stroke-width="1.5"/>
+
+  <text x="82" y="176" class="label">State</text>
+  <text x="264" y="176" class="label">Encoding</text>
+  <text x="450" y="176" class="label">Output</text>
+  <text x="630" y="176" class="label">Next state</text>
+
+  <line x1="82" y1="196" x2="876" y2="196" stroke="#334155" stroke-width="1"/>
+
+  <text x="82" y="235" class="mono">s0</text>
+  <text x="264" y="235" class="mono">2'b00</text>
+  <text x="450" y="235" class="mono">green = 3'b010</text>
+  <text x="630" y="235" class="mono">s1</text>
+
+  <text x="82" y="278" class="mono">s1</text>
+  <text x="264" y="278" class="mono">2'b01</text>
+  <text x="450" y="278" class="mono">yellow = 3'b001</text>
+  <text x="630" y="278" class="mono">s0</text>
+
+  <text x="82" y="321" class="mono">s2</text>
+  <text x="264" y="321" class="mono">2'b10</text>
+  <text x="450" y="321" class="mono">red = 3'b100</text>
+  <text x="630" y="321" class="mono">s0</text>
+
+  <text x="82" y="366" class="small">Default behavior: unknown state falls back to red and returns to s0 on the next clock edge.</text>
+</svg>
