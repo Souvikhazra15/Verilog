@@ -1,4 +1,4 @@
-module traffic_light_fsm( clock, light);
+module traffic_light_fsm( clk, light);
  input clk;
  output reg [0:2] light;
 
@@ -19,7 +19,7 @@ module traffic_light_fsm( clock, light);
        end
         default: begin
             light <= red;
-            state <= s0
+            state <= s0;
         end
     endcase
     
